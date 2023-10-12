@@ -14,18 +14,26 @@ export default function Home() {
             height={50}
             priority></Image>
         </div>
-        <div className="self-center">
+        <div className="self-center flex gap-2">
           <p className="font-black text-3xl font-serif">
-            Cube Inc.
+            BookSP
+          </p>
+          <p className='self-end font-black text-2xl font-serif'>
+            Business
           </p>
         </div>
       </div>
 
       <div className="flex justify-center bg-black">
         <div className="flex flex-col justify-center mt-10">
-          <p className="font-black text-4xl font-serif self-center mb-5 text-white">
-            Book Cube
-          </p>
+          <div className='flex justify-center gap-2 mb-5'>
+            <p className="font-black text-4xl font-serif text-white">
+              BookSP
+            </p>
+            <p className="font-black text-3xl font-serif self-end text-white">
+              Facade
+            </p>
+          </div>
           <p className="font-black text-lg font-serif self-center mb-8 text-white">
             Sharing books in a cubic way.
           </p>
@@ -39,7 +47,7 @@ export default function Home() {
           <div className='z-10' style={{ width: '500px', height: '500px' }}>
               <model-viewer
                 style={{ width: '500px', height: '500px' }}
-                src="/scene.glb"
+                src="/sample.glb"
                 width="500px"
                 height="500px"
                 alt="A 3D model of a table with food on it"
@@ -85,15 +93,15 @@ export default function Home() {
         </div>
       </div>
       <footer className="flex flex-col justify-center mt-20 bg-gray-200">
-        <div className='mt-10 z-10 self-center mb-10 hover:underline hover:underline-offset-4'>
+        <div className='mt-10 z-10 self-center mb-10 hover:underline hover:underline-offset-8'>
           <Link href="/about">
             <p className="text-xl font-serif text-black">
-                About us
+                About Us
             </p>
           </Link>
         </div>
         <p className="text-lg font-serif self-center mb-10 text-black">
-            © 2023 Cube Inc.
+            © 2023 BookSP
         </p>
       </footer>
     </main>
