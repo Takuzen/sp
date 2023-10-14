@@ -6,17 +6,9 @@ export default function Home() {
     <main className="max-h-max flex flex-col">
 
       <div className='max-w-[50vw] mx-7 my-5 flex justify-start gap-5'>
-        <div className="">
-          <Image
-            src="/cube-brown-logo.png"
-            alt="Cube Inc. Logo"
-            width={50}
-            height={50}
-            priority></Image>
-        </div>
         <div className="self-center flex gap-2">
           <p className="font-black text-3xl font-serif">
-            BookSP
+            Cube
           </p>
           <p className='self-end font-black text-2xl font-serif'>
             Business
@@ -28,17 +20,14 @@ export default function Home() {
         <div className="flex flex-col justify-center mt-10">
           <div className='flex justify-center gap-2 mb-5'>
             <p className="font-black text-4xl font-serif text-white">
-              BookSP
-            </p>
-            <p className="font-black text-3xl font-serif self-end text-white">
-              Facade
+              Cube
             </p>
           </div>
           <p className="font-black text-lg font-serif self-center mb-8 text-white">
-            Sharing books in a cubic way.
+            A social media ready for 3D.
           </p>
           <div className='self-center mb-8 bg-white rounded-full px-5 py-2 hover:opacity-80 hover:cursor-pointer'> 
-            <Link href="https://bookcube.vercel.app/">
+            <Link href="https://cube-tau.vercel.app/">
               <p className="font-black text-lg font-serif text-blue-400">
                 See service
               </p>
@@ -69,7 +58,7 @@ export default function Home() {
               BookSP
           </p>
           <p className="font-black text-lg font-serif self-center mb-10 text-black">
-              Your Spatial Book Shelf
+              Your Spatial Book Shop
           </p>
         </div>
         <div className='flex justify-around'>
@@ -101,7 +90,7 @@ export default function Home() {
           </Link>
         </div>
         <p className="text-lg font-serif self-center mb-10 text-black">
-            © 2023 BookSP
+            © 2023 Cube
         </p>
       </footer>
     </main>
