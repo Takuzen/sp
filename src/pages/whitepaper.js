@@ -1,6 +1,6 @@
 import NewsletterSubscription from '../components/NewsletterSubscription';
 
-export default function BookSPWhitepaper() {
+export default function Whitepaper() {
     return (
         <main className="z-10 flex min-h-screen flex-col items-center justify-between px-5 py-12 sm:p-24">
           <div className="w-full leading-loose tracking-widest">
@@ -17,11 +17,11 @@ export default function BookSPWhitepaper() {
             <br/>
             <p>We stand on the shoulders of these giants to take the digital reading experience a step further.</p>
             <br/>
-            <p>What is missing in the flat-screen reading experience is an overview. People often gain cues for action from visual information more than they realize. The existence of the term "stealth advertising" proves this point. Among other advantages, the high level of overview when books are arranged individually or collectively is one of the main reasons people still keep bookshelves at home despite the space they take up.</p>
+            <p>What is missing in the flat-screen reading experience is an overview. People often gain cues for action from visual information more than they realize. The existence of the term &quot;stealth advertising&quot; proves this point. Among other advantages, the high level of overview when books are arranged individually or collectively is one of the main reasons people still keep bookshelves at home despite the space they take up.</p>
             <br/>
             <p>Solution</p>
             <br/>
-            <p>With the possibilities brought about by spatial computing through Apple's Vision Pro announcement, we believe the lack of an overview in digital books can also be greatly improved.</p>
+            <p>With the possibilities brought about by spatial computing through Apple&lsquo;s Vision Pro announcement, we believe the lack of an overview in digital books can also be greatly improved.</p>
             <br/>
             <p>You can pick a book that catches your eye from a wall full of books, pull it out by its spine, and hold it in your hand. While supporting the book with the palm of your hand, you can flip through the pages with your dominant hand. We are fully committed to developing this sense of immersion and tactile interaction.</p>
             <br/>
@@ -35,7 +35,7 @@ export default function BookSPWhitepaper() {
           <footer className="flex flex-col justify-center my-10">
             <div className='self-center mt-4 sm:mt-10 z-10 mb-4 sm:mb-10'>
               <p className="text-sm sm:text-lg font-serif self-center text-black">
-                  © 2023 Teegarden
+                  &copy; 2023 Teegarden
               </p>
             </div>
           </footer>
