@@ -1,30 +1,113 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import NewsletterSubscription from '../components/NewsletterSubscription';
 
 export default function Home() {
+
   return (
-    <main className="max-h-max flex flex-col">
-
-      <div className='max-w-screen-md mx-4 sm:mx-7 my-2 sm:my-5 flex justify-start gap-2'>
-        <div className="self-center flex gap-2">
-          <p className="text-xl sm:text-3xl font-black font-serif">
-            Cube
-          </p>
-          <p className='self-end text-lg sm:text-2xl font-black font-serif'>
-            Business
-          </p>
-        </div>
-      </div>
-
-      <div className="flex justify-center bg-black">
-        <div className="flex flex-col justify-center mt-5 sm:mt-10">
-          <div className='flex justify-center gap-2 mb-3 sm:mb-5'>
-            <p className="text-2xl sm:text-4xl font-black font-serif text-white">
-              Cube
+    <main className="max-h-max flex flex-col bg-[#ffc500]">
+      <div id="header" className='max-w-full mx-4 sm:mx-7 my-5 sm:my-10 flex justify-between'>
+          <div className='self-center'>
+            <p className="text-2xl sm:text-4xl font-black font-serif text-black">
+                BookSP
             </p>
           </div>
-          <p className="text-sm sm:text-lg font-black font-serif self-center mb-4 sm:mb-8 text-white">
-            A social media ready for 3D.
+          <div className='self-center'>
+            <Link href="/about-us">
+              <p className='text-lg underline underline-offset-4 hover:underline-offset-8 hover: cursor-pointer'>
+                About Us
+              </p>
+            </Link>
+          </div>
+      </div>
+
+      <div className='font-black text-4xl sm:text-6xl md:mx-5 lg:mx-0 self-center mt-10'>
+        <p className='text-center'>Create Your Spatial Library, Easily</p>
+      </div>
+
+      <div className="flex flex-col gap-4 sm:gap-10 pt-10">
+        <div className="flex flex-col justify-center">
+          <Link href="/whitepaper" className='self-center'>
+            <p className="text-lg font-black font-serif mb-4 sm:mb-10 text-white underline underline-offset-4 hover:underline-offset-8 hover: cursor-pointer">
+                Whitepaper
+            </p>
+          </Link>
+        </div>
+        <div className='flex justify-center gap-5'>
+          <p className="text-lg sm:text-2xl font-black font-serif self-center text-black">
+              Coming with
+          </p>
+          <Link href="https://www.apple.com/apple-vision-pro/">
+            <Image
+              src="/vision-pro-icon.png"
+              alt="Vision Pro Icon Mobile"
+              width={70}
+              height={70}
+              className='block sm:hidden'
+              priority></Image>
+          </Link>
+          <Link href="https://www.apple.com/apple-vision-pro/">
+            <Image
+              src="/vision-pro-icon.png"
+              alt="Vision Pro Icon"
+              width={100}
+              height={100}
+              className='hidden sm:block'
+              priority></Image>
+          </Link>
+        </div>
+        
+        <NewsletterSubscription />
+
+        <div className='mx-20 flex flex-col justify-center'>
+          <Image
+            src="/triple-down-arrow.png"
+            alt="Preview Image 1 Mobile"
+            width={100}
+            height={100}
+            priority
+            className='self-center block sm:hidden'></Image>
+          <Image
+            src="/triple-down-arrow.png"
+            alt="Preview Image 1"
+            width={150}
+            height={150}
+            priority
+            className='hidden sm:block self-center'></Image>
+          <p className='self-center text-2xl sm:text-4xl font-serif italic font-bold'>A Sneak Peak</p>
+        </div>
+        
+        <div className='mb-10 flex flex-col gap-10 justify-center sm:justify-around items-center'>
+          <Image
+            src="/booksp-preview-0.png"
+            alt="Preview Image 1"
+            width={700}
+            height={700}
+            priority></Image>
+          <Image
+            src="/booksp-preview-2.png"
+            alt="Preview Image 3"
+            width={700}
+            height={700}
+            priority></Image>
+          <Image
+            src="/booksp-preview-1.png"
+            alt="Preview Image 2"
+            width={700}
+            height={700}
+            priority></Image>
+        </div>
+      
+    {/* Cube Part
+      <div className="flex justify-center">
+        <div className="flex flex-col justify-center mt-5 sm:mt-10">
+          <div className='flex justify-center gap-2 mb-3 sm:mb-5'>
+            <p className="text-2xl sm:text-4xl font-black font-serif text-black">
+              Facade
+            </p>
+          </div>
+          <p className="text-sm sm:text-lg font-black font-serif self-center mb-4 sm:mb-8 text-black">
+            Read/Write 3D things from 2D.
           </p>
           <div className='self-center mb-4 sm:mb-8 bg-white rounded-full px-3 sm:px-5 py-1 sm:py-2 hover:opacity-80 hover:cursor-pointer'> 
             <Link href="https://cube-tau.vercel.app/">
@@ -67,49 +150,18 @@ export default function Home() {
           </div>
         </div>
       </div>
+    */}
+  </div>
 
-      <div className="flex flex-col gap-4 sm:gap-10">
-        <div className="flex flex-col justify-center mt-10 sm:mt-20">
-          <p className="text-2xl sm:text-4xl font-black font-serif self-center mb-2 sm:mb-5 text-black">
-              BookSP
-          </p>
-          <p className="text-sm sm:text-lg font-black font-serif self-center mb-4 sm:mb-10 text-black">
-              Your Spatial Book Shop
-          </p>
-        </div>
-        <div className='flex flex-col gap-7 sm:flex-row justify-center sm:justify-around items-center'>
-          <Image
-            src="/booksp-preview-0.png"
-            alt="Cube Inc. Logo"
-            width={200}
-            height={200}
-            priority></Image>
-          <Image
-            src="/booksp-preview-1.png"
-            alt="Cube Inc. Logo"
-            width={200}
-            height={200}
-            priority></Image>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-20">
-          <p className="text-lg sm:text-2xl font-black font-serif self-center mb-4 sm:mb-10 text-yellow-400">
-              Coming with Vision Pro
-          </p>
-        </div>
-      </div>
+  <NewsletterSubscription />
 
-      <footer className="flex flex-col justify-center mt-10 sm:mt-20 bg-gray-200">
-        <div className='mt-4 sm:mt-10 z-10 self-center mb-4 sm:mb-10 hover:underline hover:underline-offset-8'>
-          <Link href="/about">
-            <p className="text-lg sm:text-xl font-serif text-black">
-                About Us
-            </p>
-          </Link>
-        </div>
-        <p className="text-sm sm:text-lg font-serif self-center mb-4 sm:mb-10 text-black">
-            © 2023 Cube
-        </p>
-      </footer>
-    </main>
-  )
+  <footer className="flex flex-col justify-center my-10">
+    <div className='self-center mt-4 sm:mt-10 z-10 mb-4 sm:mb-10'>
+      <p className="text-sm sm:text-lg font-serif self-center text-black">
+          © 2023 Teegarden
+      </p>
+    </div>
+  </footer>
+</main>
+)
 }
