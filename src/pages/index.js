@@ -9,7 +9,7 @@ export default function Home() {
       <div id="header" className='max-w-full mx-4 sm:mx-7 my-5 sm:my-10 flex justify-between'>
           <div className='self-center'>
             <p className="text-2xl sm:text-4xl font-black font-serif text-black">
-                BookSP
+                Teegarden
             </p>
           </div>
           <div className='self-center'>
@@ -22,7 +22,7 @@ export default function Home() {
       </div>
 
       <div className='font-black text-4xl sm:text-6xl md:mx-5 lg:mx-0 self-center mt-10'>
-        <p className='text-center'>Create Your Spatial Library, Easily</p>
+        <p className='text-center'>View and Share Spatial Contents, Easily</p>
       </div>
 
       <div className="flex flex-col gap-4 sm:gap-10 pt-10">
@@ -158,7 +158,7 @@ export default function Home() {
   <footer className="flex flex-col justify-center my-10">
     <div className='self-center mt-4 sm:mt-10 z-10 mb-4 sm:mb-10'>
       <p className="text-sm sm:text-lg font-serif self-center text-black">
-          © 2023 Teegarden
+          © 2024 Teegarden
       </p>
     </div>
   </footer>
