@@ -5,13 +5,29 @@ import NewsletterSubscription from '../components/NewsletterSubscription';
 export default function Home() {
 
   return (
-    <main className="max-h-max flex flex-col bg-[#ffc500]">
+    <main className="max-h-max flex flex-col bg-white">
       <div id="header" className='max-w-full mx-4 sm:mx-7 my-5 sm:my-10 flex justify-between'>
-          <div className='self-center'>
+          <div className='flex flex-row items-center gap-3'>
+          <Image
+              src="/notesp-logo.png"
+              alt="notesp-logo"
+              width={50}
+              height={50}
+              className="block md:hidden"
+              priority></Image>
+            <Image
+              src="/notesp-logo.png"
+              alt="notesp-logo"
+              width={70}
+              height={70}
+              className="hidden md:block"
+              priority></Image>
             <p className="text-2xl sm:text-4xl font-black font-serif text-black">
-                Teegarden
+                NoteSP
             </p>
           </div>
+          
+        {/*
           <div className='self-center'>
             <Link href="/about-us">
               <p className='text-lg underline underline-offset-4 hover:underline-offset-8 hover: cursor-pointer'>
@@ -19,146 +35,83 @@ export default function Home() {
               </p>
             </Link>
           </div>
+        */}
+
       </div>
 
-      <div className='font-black text-4xl sm:text-6xl md:mx-5 lg:mx-0 self-center mt-10'>
-        <p className='text-center'>View and Share Spatial Contents, Easily</p>
+      <div className='font-black text-3xl sm:text-6xl md:mx-5 lg:mx-0 self-center mt-10'>
+        <p className='text-center'>Create & Share Your World, Easily.</p>
       </div>
+      
+      {/*
+      
+        <div className="flex flex-col items-center mt-10">
+          <Link href="/whitepaper">
 
-      <div className="flex flex-col gap-4 sm:gap-10 pt-10">
-        <div className="flex flex-col justify-center">
-          <Link href="/whitepaper" className='self-center'>
-            <p className="text-lg font-black font-serif mb-4 sm:mb-10 text-white underline underline-offset-4 hover:underline-offset-8 hover: cursor-pointer">
-                Whitepaper
-            </p>
-          </Link>
-        </div>
-        <div className='flex justify-center gap-5'>
-          <p className="text-lg sm:text-2xl font-black font-serif self-center text-black">
-              Coming with
-          </p>
-          <Link href="https://www.apple.com/apple-vision-pro/">
-            <Image
-              src="/vision-pro-icon.png"
-              alt="Vision Pro Icon Mobile"
-              width={70}
-              height={70}
-              className='block sm:hidden'
-              priority></Image>
-          </Link>
-          <Link href="https://www.apple.com/apple-vision-pro/">
-            <Image
-              src="/vision-pro-icon.png"
-              alt="Vision Pro Icon"
-              width={100}
-              height={100}
-              className='hidden sm:block'
-              priority></Image>
-          </Link>
-        </div>
-        
-        <NewsletterSubscription />
+            <div className="sm:block md:hidden w-full max-w-md bg-black rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 ease-in-out" style={{width: '200px', height: '300px'}}>
+              <div className="flex flex-col justify-top h-full mt-10">
+                <div>
+                  <h2 className="text-md font-bold text-white text-center">New Space Handbook</h2>
+                  <p className="text-sm text-white mt-2 text-center italic">express beyond screen</p>
+                </div>
+                <div className="w-full mt-10">
+                  <model-viewer src="earth.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" exposure="1.17" camera-orbit="90deg 0deg" style={{width: '100%', height: '100px'}}>
+                    <div className="progress-bar hide" slot="progress-bar">
+                      <div className="update-bar"></div>
+                    </div>
+                  </model-viewer>
+                </div>
+              </div>
+            </div>
 
-        <div className='mx-20 flex flex-col justify-center'>
-          <Image
-            src="/triple-down-arrow.png"
-            alt="Preview Image 1 Mobile"
-            width={100}
-            height={100}
-            priority
-            className='self-center block sm:hidden'></Image>
-          <Image
-            src="/triple-down-arrow.png"
-            alt="Preview Image 1"
-            width={150}
-            height={150}
-            priority
-            className='hidden sm:block self-center'></Image>
-          <p className='self-center text-2xl sm:text-4xl font-serif italic font-bold'>A Sneak Peak</p>
-        </div>
-        
-        <div className='mb-10 flex flex-col gap-10 justify-center sm:justify-around items-center'>
-          <Image
-            src="/booksp-preview-0.png"
-            alt="Preview Image 1"
-            width={700}
-            height={700}
-            priority></Image>
-          <Image
-            src="/booksp-preview-2.png"
-            alt="Preview Image 3"
-            width={700}
-            height={700}
-            priority></Image>
-          <Image
-            src="/booksp-preview-1.png"
-            alt="Preview Image 2"
-            width={700}
-            height={700}
-            priority></Image>
+            <div className="hidden md:block w-full max-w-md mt-5 bg-black rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 ease-in-out" style={{width: '500px', height: '600px'}}>
+              <div className="flex flex-col justify-top h-full p-4 mt-20">
+                <div>
+                  <h2 className="text-2xl font-bold text-white text-center">New Space Handbook</h2>
+                  <p className="text-md text-white mt-2 text-center italic">express beyond screen</p>
+                </div>
+                <div className="w-full mt-20">
+                  <model-viewer src="earth.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" exposure="1.17" camera-orbit="90deg 0deg" style={{width: '100%', height: '200px'}}>
+                    <div className="progress-bar hide" slot="progress-bar">
+                      <div className="update-bar"></div>
+                    </div>
+                  </model-viewer>
+                </div>
+              </div>
+            </div>
+          </Link>
         </div>
       
-    {/* Cube Part
-      <div className="flex justify-center">
-        <div className="flex flex-col justify-center mt-5 sm:mt-10">
-          <div className='flex justify-center gap-2 mb-3 sm:mb-5'>
-            <p className="text-2xl sm:text-4xl font-black font-serif text-black">
-              Facade
-            </p>
-          </div>
-          <p className="text-sm sm:text-lg font-black font-serif self-center mb-4 sm:mb-8 text-black">
-            Read/Write 3D things from 2D.
-          </p>
-          <div className='self-center mb-4 sm:mb-8 bg-white rounded-full px-3 sm:px-5 py-1 sm:py-2 hover:opacity-80 hover:cursor-pointer'> 
-            <Link href="https://cube-tau.vercel.app/">
-              <p className="text-sm sm:text-lg font-black font-serif text-blue-400">
-                See service
-              </p>
-            </Link>
-          </div>
-          <div className='z-10 w-64 sm:w-[500px] h-64 sm:h-[500px] md:hidden'>
-              <model-viewer
-                style={{ width: '250px', height: '250px' }}
-                src="/sample.glb"
-                width="500px"
-                height="500px"
-                alt="A 3D model of a table with food on it"
-                ar
-                auto-rotate
-                auto-rotate-delay="1000"
-                rotation-per-second="400%"
-                shadow-intensity="1"
-                touch-action="pan-y"
-                camera-orbit="0 130deg 40deg"> 
-              </model-viewer>
-          </div>
-          <div className='hidden md:flex z-10 w-[100%]'>
-              <model-viewer
-                style={{ width: '500px', height: '500px', margin: 'auto' }}
-                src="/sample.glb"
-                width="500px"
-                height="500px"
-                alt="A 3D model of a table with food on it"
-                ar
-                auto-rotate
-                auto-rotate-delay="1000"
-                rotation-per-second="400%"
-                shadow-intensity="1"
-                touch-action="pan-y"
-                camera-orbit="0 130deg 40deg"> 
-              </model-viewer>
-          </div>
-        </div>
-      </div>
-    */}
-  </div>
+      */}
+      
+      
+      <div className="flex flex-col gap-4 sm:gap-10 pt-10">
+        {/*
+        <div className='flex justify-center gap-5'>
+          <Link href="https://apps.apple.com/us/app/teegarden/id6478132550">
+            <Image
+            src="/app-store-badge.svg"
+            alt="App Store Badge"
+            width={150}
+            height={150}
+            className='block'
+            priority></Image>
+          </Link>
 
-  <NewsletterSubscription />
+        </div>
+        */}
+
+        <NewsletterSubscription />
+        <p className="text-sm sm:text-lg font-serif self-center text-black">
+          We deliver tips to help your spatial creations.
+        </p>
+
+  </div>
 
   <footer className="flex flex-col justify-center my-10">
     <div className='self-center mt-4 sm:mt-10 z-10 mb-4 sm:mb-10'>
       <p className="text-sm sm:text-lg font-serif self-center text-black">
-          © 2024 Teegarden
+          © 2024 NoteSP 
       </p>
     </div>
   </footer>
