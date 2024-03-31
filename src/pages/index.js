@@ -40,7 +40,7 @@ export default function Home() {
       </div>
 
       <div className='font-black text-3xl sm:text-6xl md:mx-5 lg:mx-0 self-center mt-10'>
-        <p className='text-center'>Create & Share Your World, Easily.</p>
+        <p className='text-center'>Create & Share Spatial Notes, Easily.</p>
       </div>
       
       {/*
@@ -101,10 +101,38 @@ export default function Home() {
         </div>
         */}
 
+<div className='flex justify-center gap-10'>
+    <div>
+        <strong className='text-red-500'>Slack</strong>
+        <Image
+            src="/frame-slack.png"
+            alt="Slack QR Code"
+            width={150}
+            height={150}
+            className='block'
+            priority
+        />
+    </div>
+    <div>
+        <strong>GitHub</strong>
+        <Image
+            src="/frame-github.png"
+            alt="GitHub QR Code"
+            width={150}
+            height={150}
+            className='block'
+            priority
+        />
+    </div>
+</div>
+
+
+        {/*
         <NewsletterSubscription />
         <p className="text-sm sm:text-lg font-serif self-center text-black">
           We deliver tips to help your spatial creations.
         </p>
+      */}
 
   </div>
 
