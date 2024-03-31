@@ -111,7 +111,7 @@ export default function Home() {
   <footer className="flex flex-col justify-center my-10">
     <div className='self-center mt-4 sm:mt-10 z-10 mb-4 sm:mb-10'>
       <p className="text-sm sm:text-lg font-serif self-center text-black">
-          © 2024 NoteSP 
+          © 2024 NoteSP
       </p>
     </div>
   </footer>
