@@ -5,6 +5,7 @@ import { query, where, getDocs } from "firebase/firestore";
 const db = getFirestore();
 
 export default function NewsletterSubscription() {
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -14,8 +15,6 @@ export default function NewsletterSubscription() {
   };
 
   const handleSubscribe = async () => {
-    const email = document.querySelector("input[placeholder='Email']").value;
-
     if (email === "") {
       setIsSuccess(false);
       setMessage("Email address cannot be blank.");
@@ -55,8 +54,14 @@ export default function NewsletterSubscription() {
   return (
     <div>
       <div className="flex justify-center mt-10">
-        <input id="email-filed-mobile" placeholder='Email' className='sm:hidden self-center text-md px-10 py-4 rounded-l-lg font-mono border-2 border-red-500 focus:outline-none focus:border-none focus:caret-[#ffc500]' size="10"/>
-        <input id="email-filed" placeholder='Email' className='hidden sm:block self-center text-md px-10 py-4 rounded-l-lg font-mono border-2 border-red-500 focus:outline-none focus:border-none focus:caret-[#ffc500]' />
+        <input 
+          id="email-field" 
+          placeholder='Email' 
+          className='self-center text-md px-10 py-4 rounded-l-lg font-mono border-2 border-red-500 focus:outline-none focus:border-none focus:caret-[#ffc500]' 
+          size="10"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
         <p className="text-md sm:text-xl font-semibold">
           <button onClick={handleSubscribe} className='px-5 sm:px-10 py-[18px] sm:py-4 rounded-r-lg text-white bg-[#E83015]'>
             Get updates!

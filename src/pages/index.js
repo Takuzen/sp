@@ -1,8 +1,16 @@
+import { useEffect, useRef } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 import NewsletterSubscription from '../components/NewsletterSubscription';
 
 export default function Home() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 1;
+    }
+  }, []);
 
   return (
     <main className="max-h-max flex flex-col bg-white">
@@ -41,6 +49,13 @@ export default function Home() {
 
       <div className='font-black text-3xl sm:text-6xl md:mx-5 lg:mx-0 self-center mt-10'>
         <p className='text-center'>Create & Share Spatial Notes, Easily.</p>
+      </div>
+
+      <div className='flex justify-center mt-5'>
+        <video ref={videoRef} width="640" height="360" controls>
+            <source src="notesp-intro.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
       </div>
       
       {/*
@@ -126,13 +141,10 @@ export default function Home() {
     </div>
 </div>
 
-
-        {/*
-        <NewsletterSubscription />
-        <p className="text-sm sm:text-lg font-serif self-center text-black">
-          We deliver tips to help your spatial creations.
-        </p>
-      */}
+<NewsletterSubscription />
+<p className="text-sm sm:text-lg font-serif self-center text-black">
+  We deliver tips to help your spatial creations.
+</p>
 
   </div>
 
