@@ -53,7 +53,7 @@ export default function Home() {
 
       <div className='flex justify-center mt-5'>
         <video ref={videoRef} width="640" height="360" controls>
-            <source src="notesp-intro.mp4" type="video/mp4" />
+            <source src="notesp-intro-720.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
       </div>
