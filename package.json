@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "electron-to-chromium": "^1.4.723",
     "firebase": "^10.5.2",
     "next": "latest",
     "react": "latest",
