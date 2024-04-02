@@ -1,3 +1,1 @@
-/notesp-intro.mp4 filter=lfs diff=lfs merge=lfs -text
-public/notesp-intro-720.mp4 filter=lfs diff=lfs merge=lfs -text
 public/notesp-intro.mp4 filter=lfs diff=lfs merge=lfs -text
