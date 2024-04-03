@@ -51,12 +51,13 @@ export default function Home() {
         <p className='text-center'>Create & Share Spatial Notes, Easily.</p>
       </div>
 
-      <div className='flex justify-center mt-5'>
+      <div className='flex justify-center mt-10'>
         <video ref={videoRef} width="640" height="360" controls>
-            <source src="notesp-intro.mp4" type="video/mp4" />
+            <source src="https://storage.googleapis.com/booksp-eae3c.appspot.com/facede/video/notesp-intro.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
-      </div>
+    </div>
+
       
       {/*
       
