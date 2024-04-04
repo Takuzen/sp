@@ -64,7 +64,7 @@ export default function NewsletterSubscription() {
         />
         <p className="text-md sm:text-xl font-semibold">
           <button onClick={handleSubscribe} className='px-5 sm:px-10 py-[18px] sm:py-4 rounded-r-lg text-white bg-[#E83015]'>
-            Get updates!
+            Notify Me When Available
           </button>
         </p>
       </div>

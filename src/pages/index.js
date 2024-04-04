@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <main className="max-h-max flex flex-col bg-white">
-      <div id="header" className='max-w-full mx-4 sm:mx-7 my-5 sm:my-10 flex justify-between'>
+      <div id="header" className='max-w-full mx-4 sm:mx-7 my-5 sm:my-5 flex justify-between'>
           <div className='flex flex-row items-center gap-3'>
           <Image
               src="/notesp-logo.png"
@@ -47,17 +47,16 @@ export default function Home() {
 
       </div>
 
-      <div className='font-black text-3xl sm:text-6xl md:mx-5 lg:mx-0 self-center mt-10'>
-        <p className='text-center'>Create & Share Spatial Notes, Easily.</p>
-      </div>
-
-      <div className='flex justify-center mt-10'>
-        <video ref={videoRef} width="640" height="360" controls>
+      <div className='flex justify-center mt-5'>
+        <video ref={videoRef} width="800" height="360" controls autoPlay>
             <source src="https://storage.googleapis.com/booksp-eae3c.appspot.com/facede/video/notesp-intro.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
-    </div>
+      </div>
 
+      <div className='font-black text-2xl sm:text-5xl md:mx-5 lg:mx-0 self-center mt-10'>
+        <p className='text-center'>Spatial Notes, Easily.</p>
+      </div>
       
       {/*
       
@@ -116,10 +115,39 @@ export default function Home() {
 
         </div>
         */}
+  
+  <div className='fle flex-col self-center items-center'>
+    <Image
+      src="/vdc-final-transparent.png"
+      alt="VisionDevCamp Logo"
+      width={240}
+      height={40}
+      priority></Image>
+      <strong className='text-2xl'>Most Useful App</strong>
+  </div>
 
-<div className='flex justify-center gap-10'>
+  <NewsletterSubscription />
+  {/*
+  <p className="text-sm sm:text-lg font-serif self-center text-black">
+    We deliver tips and more.
+  </p>
+  */}
+
+  <div className='flex justify-center gap-10'>
     <div>
-        <strong className='text-red-500'>Slack</strong>
+      <Link href="https://twitter.com/notespapp">
+        <Image
+            src="/notesp-x-logo.png"
+            alt="NoteSP X Logo"
+            width={209}
+            height={140}
+            className='block rounded-md'
+            priority
+        />
+      </Link>
+    </div>
+    <div>
+        <strong>JOIN THE COMMUNITY</strong>
         <Image
             src="/frame-slack.png"
             alt="Slack QR Code"
@@ -140,14 +168,8 @@ export default function Home() {
             priority
         />
     </div>
-</div>
-
-<NewsletterSubscription />
-<p className="text-sm sm:text-lg font-serif self-center text-black">
-  We deliver tips to help your spatial creations.
-</p>
-
   </div>
+</div>
 
   <footer className="flex flex-col justify-center my-10">
     <div className='self-center mt-4 sm:mt-10 z-10 mb-4 sm:mb-10'>
