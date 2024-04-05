@@ -53,22 +53,43 @@ export default function NewsletterSubscription() {
 
   return (
     <div>
-      <div className="flex justify-center mt-10">
-        <input 
-          id="email-field" 
-          placeholder='Email' 
-          className='self-center text-md px-10 py-4 rounded-l-lg font-mono border-2 border-red-500 focus:outline-none focus:border-none focus:caret-[#ffc500]' 
-          size="10"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <p className="text-md sm:text-xl font-semibold">
-          <button onClick={handleSubscribe} className='px-5 sm:px-10 py-[18px] sm:py-4 rounded-r-lg text-white bg-[#E83015]'>
-            Notify Me When Available
-          </button>
-        </p>
-      </div>
+      <section className='block sm:hidden'>
+        <div className="flex flex-col items-center mt-8 gap-5">
+          <input 
+            id="email-field" 
+            placeholder='Email' 
+            className='self-center text-md px-3 py-2 rounded-lg font-mono border-2 border-red-500 focus:outline-none focus:border-none focus:caret-[#ffc500]' 
+            size="19"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <p className="text-md sm:text-md font-semibold">
+            <button onClick={handleSubscribe} className='px-3 sm:px-5 py-2.5 sm:py-3.5 rounded-lg text-white bg-[#E83015] hover:shadow-sm hover:opacity-70 transition duration-150 ease-in-out cursor-pointer'>
+              Notify Me When Available
+            </button>
+          </p>
+        </div>
+      </section>
+
+      <section className='hidden sm:block'>
+        <div className="flex justify-center mt-8">
+          <input 
+            id="email-field" 
+            placeholder='Email' 
+            className='self-center text-md px-5 py-3 rounded-l-lg font-mono border-2 border-red-500 focus:outline-none focus:border-none focus:caret-[#ffc500]' 
+            size="25"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <p className="text-md sm:text-md font-semibold">
+            <button onClick={handleSubscribe} className='px-3 sm:px-5 py-2 sm:py-3.5 rounded-r-lg text-white bg-[#E83015] hover:shadow-sm hover:opacity-70 transition duration-150 ease-in-out cursor-pointer'>
+              Notify Me When Available
+            </button>
+          </p>
+        </div>
+      </section>
       {message && <p className={`text-center mt-4 ${isSuccess ? 'text-blue-500 font-bold' : 'text-red-500 font-bold'}`}>{message}</p>}
     </div>
+
   );
 }
