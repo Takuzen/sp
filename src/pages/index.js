@@ -243,7 +243,7 @@ export default function Home() {
     </div>
   </section>
 
-  <text className='self-center'>Thank You.</text>
+  <text className='self-center'>See you soon.</text>
 
 </div>
 
