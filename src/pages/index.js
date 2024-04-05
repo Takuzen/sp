@@ -80,7 +80,7 @@ export default function Home() {
       </div>
 
       <div className='flex justify-center'>
-        <video ref={videoRef} width="800" height="360" controls>
+        <video ref={videoRef} width="800" height="360" controls autoPlay muted>
             <source src="https://storage.googleapis.com/booksp-eae3c.appspot.com/facede/video/notesp-intro.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>

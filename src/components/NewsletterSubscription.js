@@ -83,7 +83,7 @@ export default function NewsletterSubscription() {
           />
           <p className="text-md sm:text-md font-semibold">
             <button onClick={handleSubscribe} className='px-3 sm:px-5 py-2 sm:py-3.5 rounded-r-lg text-white bg-[#E83015] hover:shadow-sm hover:opacity-70 transition duration-150 ease-in-out cursor-pointer'>
-              Notify Me When Available
+              Notify Me On TestFlight
             </button>
           </p>
         </div>
