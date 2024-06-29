@@ -3,14 +3,29 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import NewsletterSubscription from '../components/NewsletterSubscription';
+import en from '../../public/locales/en-US.json';
+import ja from '../../public/locales/ja-JP.json';
+import zh from '../../public/locales/zh-CN.json';
 
 export default function Home() {
   const videoRef = useRef(null);
   const { locale, locales, asPath } = useRouter();
   const localeDisplayNames = {
-    en: 'EN',
-    jp: '日本語',
-    cn: '中文'
+    "en-US": 'EN',
+    "ja-JP": '日本語',
+    "zh-CN": '中文'
+  };
+  const getTranslation = (locale, key) => {
+    switch (locale) {
+      case 'en-US':
+        return en[key];
+      case 'ja-JP':
+        return ja[key];
+      case 'zh-CN':
+        return zh[key];
+      default:
+        return en[key];
+    }
   };
 
   useEffect(() => {
@@ -61,7 +76,7 @@ export default function Home() {
       </div>
       <div>
         <div className='font-black text-2xl sm:text-5xl md:mx-5 lg:mx-0 self-center mt-10'>
-          <p className='text-center'>Spatial Notes, Made Easy.</p>
+          <p className='text-center'>{getTranslation(locale, "headline")}</p>
         </div>
         <NewsletterSubscription />
       </div>
@@ -153,7 +168,7 @@ export default function Home() {
       <footer className="flex flex-col justify-center my-10">
         <div className='self-center mt-4 sm:mt-10 z-10 mb-4 sm:mb-10'>
           <p className="text-sm sm:text-lg font-serif self-center text-black">
-            Copyright © 2024 Teegarden, All rights reserved.
+            Copyright © 2024 SP, All rights reserved.
           </p>
         </div>
       </footer>
