@@ -62,7 +62,7 @@ export default function Home() {
       </div>
 
       <div className='flex justify-center gap-[200px] mt-10'>
-        <div className='flex items-center justify-center text-red-500 font-black cursor-pointer hover:opacity-70'>
+        <div className='flex items-center justify-center text-gray-300 font-black'>
           <p className='text-4xl'>Caspy</p>
         </div>
         
@@ -75,7 +75,7 @@ export default function Home() {
               alt="Notesp Logo"
               priority
             ></Image>
-            <p className='font-bold text-xl'>NoteSP</p>
+            <p className='font-bold text-3xl'>NoteSP</p>
           </div>
         </Link>
       </div>
